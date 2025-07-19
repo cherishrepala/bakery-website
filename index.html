@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sweet Crust Bakery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-image: url('https://picsum.photos/1200/400?random=1');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    header .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    header a {
+      background: #fbbf24;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    #about h2,
+    #menu h2,
+    #contact h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #c2410c;
+    }
+
+    .about-content,
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .about-content img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 15px;
+    }
+
+    .card-body h3 {
+      margin: 0 0 10px;
+    }
+
+    .card-body p {
+      color: #b91c1c;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #92400e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #fbbf24;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #f59e0b;
+    }
+
+    .success-message {
+      color: green;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .about-content {
+        flex-direction: row;
+      }
+
+      .about-content img {
+        width: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header>
+    <div class="content">
+      <h1>Sweet Crust Bakery</h1>
+      <p>Handcrafted with love, baked to perfection</p>
+      <a href="#menu">Explore Our Menu</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Sweet Crust</h2>
+    <div class="about-content">
+      <img src=" https://picsum.photos/600/400?random=2" alt="About Us">
+      <div>
+        <p>
+          At Sweet Crust Bakery, we believe that every bite should tell a story of tradition, quality, and passion. 
+          Our journey began in a small kitchen with a love for baking and a dream to bring joy through delicious treats.
+        </p>
+        <p>
+          Each product is made with the finest ingredients, carefully selected to ensure every cake, pastry, and loaf is a masterpiece.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="card">
+        <img src=" https://picsum.photos/400/300?random=3" alt="Croissant">
+        <div class="card-body">
+          <h3>Classic Croissant</h3>
+          <p>$3.50</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src=" https://picsum.photos/400/300?random=4" alt="Brownie">
+        <div class="card-body">
+          <h3>Chocolate Brownie</h3>
+          <p>$4.00</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src=" https://picsum.photos/400/300?random=5" alt="Lemon Tart">
+        <div class="card-body">
+          <h3>Lemon Tart</h3>
+          <p>$4.50</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src=" https://picsum.photos/400/300?random=6" alt="Cupcake">
+        <div class="card-body">
+          <h3>Vanilla Cupcake</h3>
+          <p>$2.75</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src=" https://picsum.photos/400/300?random=7" alt="Muffin">
+        <div class="card-body">
+          <h3>Blueberry Muffin</h3>
+          <p>$3.25</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src=" https://picsum.photos/400/300?random=8" alt="Cinnamon Roll">
+        <div class="card-body">
+          <h3>Cinnamon Roll</h3>
+          <p>$3.75</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required><br>
+        <input type="email" name="email" placeholder="Your Email" required><br>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea><br>
+        <button type="submit">Send Message</button>
+        <div id="successMessage" class="success-message" style="display:none;">
+          Thank you! Your message has been sent.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Sweet Crust Bakery. All rights reserved.
+  </footer>
+
+  <script>
+    // Simple form submission (shows success message)
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      successMessage.style.display = 'block';
+      form.reset();
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+      }, 3000);
+    });
+  </script>
+
+</body>
+</html>
